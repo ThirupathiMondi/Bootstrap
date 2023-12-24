@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <title>Collapse</title>
+</head>
+
+<body>
+    <div>
+        <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#con1" onclick="checkCon2()">Content
+            1</button>
+        <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#con2" onclick="checkCon1()">Content
+            2</button>
+    </div>
+    <div>
+        <p class="collapse text-warning" id="con1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
+            quae eum repellat fugiat possimus dolorum id est eius animi recusandae? Sed, quam minima sunt fugit numquam
+        </p>
+        <p class="collapse text-danger" id="con2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto
+            vitae nam perspiciatis magnam voluptas doloribus obcaecati neque minima ducimus, omnis odio nesciunt
+            consequuntur officia fuga quia ullam incidunt provident!</p>
+    </div>
+    <script>
+        function checkCon2 () {
+            let c1 = document.getElementById('con1');
+            c1.style.display = 'block';
+            c1.style.transition = '0.0s';
+            document.getElementById('con2').style.display = 'none';
+        }
+        function checkCon1 () {
+            document.getElementById('con1').style.display = 'none';
+
+            c2 = document.getElementById('con2');
+            c2.style.display = 'block';
+            c2.style.transition = '0.0s';
+        }
+    </script>
+</body>
+
+</html>
